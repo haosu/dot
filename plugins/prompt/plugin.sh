@@ -31,10 +31,11 @@ __git_prompt () {
 
 # Display currently active Python virtual environment if one exists
 __virtualenv_prompt () {
-  local env=`active_virtual_env`
-  if [ ! -z "$env" ]; then
-    echo -ne " $env"
-  fi
+  #local env=`active_virtual_env`
+  #if [ ! -z "$env" ]; then
+  #  echo -ne " $env"
+  #fi
+  echo -ne ""
 }
 
 # Main prompt line
