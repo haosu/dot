@@ -1,7 +1,8 @@
 # Colorize `ls` output using dircolors settings
-if [ "$TERM" != "dumb" ]; then
-  eval `dircolors $DOTPLUGIN/dircolors`
-fi
+#if [ "$TERM" != "dumb" ]; then
+  #eval `dircolors $DOTPLUGIN/dircolors`
+#fi
+export LSCOLORS=Exfxcxdxbxegedabagacad
 
 # Common shortcuts (don't care if there are previous mappings defined by system)
 forcealias ls="ls -G -h"

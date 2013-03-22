@@ -2,10 +2,10 @@
 # before the prompt is rendered for the next command.
 precmd () {
   # Display exit code if non-zero
-  local ret=$?
-  if [ ! $ret -eq 0 ]; then
-    echo -e "\033[0;31m→ exit status: $ret\033[0m" >&2
-  fi
+  #local ret=$?
+  #if [ ! $ret -eq 0 ]; then
+  #  echo -e "\033[0;31m→ exit status: $ret\033[0m" >&2
+  #fi
 
   # Update terminal title bar if one is available
   if [[ "$TERM" =~ xterm* ]]; then
@@ -43,7 +43,7 @@ PS1="${PSTARTLINE}${PRESET}${PFG[240]}\$USER${PRESET}"
 PS1="${PS1}${PFG[234]}@${PFG[245]}\$(hostname -s)${PRESET}"
 PS1="${PS1}${PFG[234]}:${PFG[136]}\$(__prompt_curdir)${PRESET}"
 PS1="${PS1}${PFG[64]}\$(__git_prompt)${PRESET}"
-PS1="${PS1}${PFG[61]}\$(__virtualenv_prompt)${PRESET}"
+#PS1="${PS1}${PFG[61]}\$(__virtualenv_prompt)${PRESET}"
 PS1="${PS1}
 ${PFG[240]}\$(current_shell)${PFG[33]}⨠ ${PRESET}"
 

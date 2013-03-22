@@ -75,6 +75,11 @@
 [core]
   autocrlf     = input
   excludesfile = ~/.gitignore
+[user]
+  name = haosu
+  email = me@haosu.org
+[credential]
+  helper = osxkeychain
 [github]
   user = haosu
 [grep]
