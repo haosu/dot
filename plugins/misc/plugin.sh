@@ -1,5 +1,6 @@
 # Serve files in current directory
 alias serve="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
+alias battery='ioreg -w0 -l | grep Capacity | cut -d " " -f 17-50'
 
 extract () {
   if [ -f $1 ] ; then

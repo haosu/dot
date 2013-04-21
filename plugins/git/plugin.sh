@@ -6,7 +6,7 @@ git () {
 }
 
 active_git_branch () {
-  local ref=`git symbolic-ref HEAD 2> /dev/null`
+  local ref=$(git symbolic-ref HEAD 2> /dev/null)
   echo "${ref#refs/heads/}"
 }
 

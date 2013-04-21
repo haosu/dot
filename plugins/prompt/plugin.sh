@@ -21,9 +21,12 @@ __prompt_curdir () {
 
 # Display the currently git branch and status if we're in a git repository
 __git_prompt () {
-  local branch=`active_git_branch`
+  local branch=$(active_git_branch)
   if [ ! -z "$branch" ]; then
-    echo " `git_branch_ahead`$branch`git_tree_status`"
+    # echo " `git_branch_ahead`$branch`git_tree_status`"
+    # echo " `git_branch_ahead`$branch"
+    echo " $(git_branch_ahead)$branch$(git_tree_status)"
+    # echo " $branch "
   else
     echo ""
   fi

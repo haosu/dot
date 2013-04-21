@@ -1,5 +1,6 @@
 # Initializes the Dot environment by defining global variables, utility
 # functions, and other settings.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function* ]]
 
 # Useful variables for plugin setup
 export DOTLOGDIR="$DOTDIR/log"
@@ -7,6 +8,7 @@ export DOTTMPDIR="$DOTDIR/tmp"
 export DOTPLUGINSDIR="$DOTDIR/plugins"
 
 # Prefer applications from HOME bin
+PATH=$PATH:$HOME/.rvm/bin
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
 
 # Returns a string representing the shell running this script
