@@ -13,7 +13,7 @@ active_git_branch () {
 git_branch_ahead () {
   local branch=`active_git_branch`
   `git log origin/$branch..HEAD 2> /dev/null | grep '^commit' &> /dev/null` \
-    && echo '➨'
+    && echo '➨ '
 }
 
 git_tree_status() {

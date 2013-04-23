@@ -23,10 +23,7 @@ __prompt_curdir () {
 __git_prompt () {
   local branch=$(active_git_branch)
   if [ ! -z "$branch" ]; then
-    # echo " `git_branch_ahead`$branch`git_tree_status`"
-    # echo " `git_branch_ahead`$branch"
-    echo " $(git_branch_ahead)$branch$(git_tree_status)"
-    # echo " $branch "
+    echo " $(git_branch_ahead)$branch $(git_tree_status)"
   else
     echo ""
   fi
