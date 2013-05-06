@@ -3,7 +3,9 @@
                      git config --get user.email'
   authors  = shortlog -sne --no-merges
   amend    = "!f() { $DOTDIR/plugins/git/scripts/amend "$@"; }; f"
-  ap        = add --patch
+  am       = "!f() { $DOTDIR/plugins/git/scripts/amend "$@"; }; f"
+  a        = add
+  ap       = add --patch
   br       = branch -v -v
   ci       = commit -v
   ctags    = "!f() { $DOTDIR/plugins/git/scripts/ctags "$@"; }; f"
@@ -11,13 +13,15 @@
   d        = diff
   fresh    = "!f() { $DOTDIR/plugins/git/scripts/fresh "$@"; }; f"
   hash     = !sh -c 'git rev-parse ${1-HEAD}' -
-  hist		 = log --oneline --graph --decorate
+  hist     = log --oneline --graph --decorate
   hr       = reset --hard
   rb       = rebase
   rbc      = rebase --continue
   sm       = submodule
   smu      = submodule update --init
   st       = status -sb
+  ss       = stash
+  sp       = stash pop
   staged   = diff --cached
   track    = !sh -c 'git branch --set-upstream `git rev-parse --abbrev-ref HEAD` $1' -
   tracking = "!f() { $DOTDIR/plugins/git/scripts/tracking "$@"; }; f"
