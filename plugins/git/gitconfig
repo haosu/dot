@@ -8,6 +8,7 @@
   ap       = add --patch
   br       = branch -v -v
   ci       = commit -v
+  cisc     = commit --no-verify
   ctags    = "!f() { $DOTDIR/plugins/git/scripts/ctags "$@"; }; f"
   co       = checkout
   d        = diff
