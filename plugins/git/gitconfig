@@ -7,12 +7,14 @@
   a        = add
   ap       = add --patch
   br       = branch -v -v
+  b        = branch -v -v
   ci       = commit -v
   cisc     = commit --no-verify
   ctags    = "!f() { $DOTDIR/plugins/git/scripts/ctags "$@"; }; f"
   co       = checkout
   d        = diff
   f        = fetch
+  fo       = fetch origin
   fresh    = "!f() { $DOTDIR/plugins/git/scripts/fresh "$@"; }; f"
   hash     = !sh -c 'git rev-parse ${1-HEAD}' -
   hist     = log --oneline --graph --decorate
