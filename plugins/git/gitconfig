@@ -6,8 +6,8 @@
   am       = "!f() { $DOTDIR/plugins/git/scripts/amend "$@"; }; f"
   a        = add
   ap       = add --patch
-  br       = branch -v -v
-  b        = branch -v -v
+  br       = branch
+  b        = branch
   ci       = commit -v
   cisc     = commit --no-verify
   ctags    = "!f() { $DOTDIR/plugins/git/scripts/ctags "$@"; }; f"
@@ -29,6 +29,7 @@
   sp       = stash pop
   sl       = stash list
   staged   = diff --cached
+  sui      = submodule update --init
   track    = !sh -c 'git branch --set-upstream `git rev-parse --abbrev-ref HEAD` $1' -
   tracking = "!f() { $DOTDIR/plugins/git/scripts/tracking "$@"; }; f"
   unstage  = !sh -c 'git reset HEAD'
