@@ -4,6 +4,8 @@
   authors  = shortlog -sne --no-merges
   amend    = "!f() { $DOTDIR/plugins/git/scripts/amend "$@"; }; f"
   am       = "!f() { $DOTDIR/plugins/git/scripts/amend "$@"; }; f"
+  amsc     = commit --amend --no-verify --verbose
+  amra     = commit --amend --reset-author
   a        = add
   ap       = add --patch
   br       = branch
@@ -12,6 +14,7 @@
   cisc     = commit --no-verify
   ctags    = "!f() { $DOTDIR/plugins/git/scripts/ctags "$@"; }; f"
   co       = checkout
+  com      = checkout master
   d        = diff
   f        = fetch
   fo       = fetch origin
