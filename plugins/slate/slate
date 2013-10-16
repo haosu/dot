@@ -1,0 +1,7 @@
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+#Push
+bind [:ctrl;cmd     push left     bar-resize:screenSizeX/2
+bind ]:ctrl;cmd     push right    bar-resize:screenSizeX/2
