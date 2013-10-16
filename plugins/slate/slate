@@ -1,7 +1,19 @@
 config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
+config secondsBeforeRepeat 0.4
+config secondsBetweenRepeat 0.1
 
-#Push
-bind [:ctrl;cmd     push left     bar-resize:screenSizeX/2
-bind ]:ctrl;cmd     push right    bar-resize:screenSizeX/2
+## Alias
+# Size
+alias hHalfScreen    bar-resize:screenSizeX/2
+alias hQuarterScreen bar-resize:screenSizeX/4
+alias vFullScreen     bar-resize:screenSizeY
+alias vHalfScreen    bar-resize:screenSizeY/2
+alias vQuarterScreen bar-resize:screenSizeY/4
+
+# Push
+bind h:ctrl;shift chain push left  ${hHalfScreen} | push left  ${hQuarterScreen}
+bind l:ctrl;shift chain push right ${hHalfScreen} | push right ${hQuarterScreen}
+bind k:ctrl;shift chain push up    ${vFullScreen} | push up    ${vHalfScreen} | push up    ${vQuarterScreen}
+bind j:ctrl;shift chain push down  ${vHalfScreen} | push down  ${vQuarterScreen}
