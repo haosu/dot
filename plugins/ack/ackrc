@@ -1,5 +1,7 @@
 --sort-files
+
 --pager=$PAGER
+
 --ignore-dir=vendor
 --ignore-dir=log
 --ignore-dir=tmp
@@ -8,5 +10,12 @@
 --ignore-dir=coverage
 --ignore-dir=.meteor/local
 --ignore-dir=_site
+--ignore-dir=.yardoc
+--ignore-dir=app/assets/images
+
 --type-add=css=.sass,.scss
 --type-add=ruby=.erb,.haml,.rake,.rb,.rhtml,.rjs,.rxml,.rsel,.spec
+
+--smart-case
+
+--context=5
