@@ -25,6 +25,17 @@
   rbc      = rebase --continue
   rbi      = rebase --interactive
   rbom     = rebase origin/master
+  rf       = !STASH=$(git stash) && \
+             echo $STASH && \
+             git fetch origin && \
+             REBASE=$(git rebase origin/master) && \
+             echo $REBASE && \
+             CONFLICT=$(echo $REBASE | grep CONFLICT) && \
+             test -z "$CONFLICT" && \
+             bundle && \
+             be rake db:migrate db:test:prepare && \
+             test \"$STASH\" != \"No local changes to save\" && \
+             git stash pop
   sm       = submodule
   smu      = submodule update --init
   st       = status -sb
