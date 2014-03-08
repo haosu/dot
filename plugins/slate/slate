@@ -4,7 +4,7 @@ config resizePercentOf screenSize
 config secondsBeforeRepeat 0.4
 config secondsBetweenRepeat 0.1
 
-alias hyper ctrl;shift
+alias hyper cmd;ctrl
 
 ## Alias
 # Size
