@@ -5,6 +5,7 @@
   amend    = "!f() { $DOTDIR/plugins/git/scripts/amend "$@"; }; f"
   am       = "!f() { $DOTDIR/plugins/git/scripts/amend "$@"; }; f"
   amsc     = commit --amend --no-verify --verbose
+  amst     = !sh -c 'SKIP_CHECKS=test_history git amend'
   amra     = commit --amend --reset-author
   a        = add
   ap       = add --patch
@@ -12,6 +13,7 @@
   b        = branch
   ci       = commit -v
   cisc     = commit --no-verify
+  cist     = !sh -c 'SKIP_CHECKS=test_history git commit -v'
   ctags    = "!f() { $DOTDIR/plugins/git/scripts/ctags "$@"; }; f"
   co       = checkout
   com      = checkout master
