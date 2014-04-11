@@ -104,7 +104,8 @@
   excludesfile = ~/.gitignore
 [user]
   name = haosu
-  email = me@haosu.org
+	email = me@haosu.org
+	gerrit = hao
 [credential]
   helper = osxkeychain
 [github]
