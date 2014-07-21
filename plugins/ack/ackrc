@@ -12,6 +12,10 @@
 --ignore-dir=_site
 --ignore-dir=.yardoc
 --ignore-dir=app/assets/images
+--ignore-dir=node_modules
+--ignore-dir=vendor/assets/bower_components
+--ignore-file=match:bundle.js
+--ignore-file=match:components.js
 
 --type-add=css=.sass,.scss
 --type-add=ruby=.erb,.haml,.rake,.rb,.rhtml,.rjs,.rxml,.rsel,.spec
