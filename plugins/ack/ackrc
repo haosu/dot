@@ -2,6 +2,7 @@
 
 --pager=$PAGER
 
+--ignore-dir=.rbenv
 --ignore-dir=vendor
 --ignore-dir=log
 --ignore-dir=tmp
@@ -16,6 +17,7 @@
 --ignore-dir=vendor/assets/bower_components
 --ignore-file=match:bundle.js
 --ignore-file=match:components.js
+--ignore-file=match:specs.js
 
 --type-add=css=.sass,.scss
 --type-add=ruby=.erb,.haml,.rake,.rb,.rhtml,.rjs,.rxml,.rsel,.spec
