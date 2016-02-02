@@ -105,7 +105,7 @@
   autocrlf     = input
   excludesfile = ~/.gitignore
 [user]
-  name = haosu
+	name = Hao Su
 	email = me@haosu.org
 	gerrit = hao
 [credential]
