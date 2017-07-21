@@ -40,6 +40,7 @@
              be rake db:migrate db:test:prepare && \
              test \"$STASH\" != \"No local changes to save\" && \
              git stash pop
+  pou      = push origin -u
   sm       = submodule
   smu      = submodule update --init
   st       = status -sb
@@ -104,6 +105,7 @@
 [core]
   autocrlf     = input
   excludesfile = ~/.gitignore
+	editor = vim
 [user]
 	name = Hao Su
 	email = me@haosu.org
