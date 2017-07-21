@@ -25,7 +25,7 @@
   hist     = log --oneline --graph --decorate
   p        = push
   pg       = push gerrit
-  pouf     = push origin -uf
+  pou      = push origin -u
   rb       = rebase
   rbc      = rebase --continue
   rbi      = rebase --interactive
@@ -41,7 +41,6 @@
              be rake db:migrate db:test:prepare && \
              test \"$STASH\" != \"No local changes to save\" && \
              git stash pop
-  pou      = push origin -u
   sm       = submodule
   smu      = submodule update --init
   st       = status -sb
