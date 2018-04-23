@@ -6,35 +6,22 @@ config secondsBetweenRepeat 0.1
 
 alias hyper cmd;ctrl
 
-## Alias
-# Size
-alias full         move   screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias leftThird         move    screenOriginX;windowTopLeftY screenSizeX*1/3;windowSizeY
+alias leftHalf          move    screenOriginX;windowTopLeftY screenSizeX*1/2;windowSizeY
+alias leftTwoThirds     move    screenOriginX;windowTopLeftY screenSizeX*2/3;windowSizeY
+alias rightThird        move    screenOriginX+screenSizeX*2/3;windowTopLeftY screenSizeX*1/3;windowSizeY
+alias rightHalf         move    screenOriginX+screenSizeX*1/2;windowTopLeftY screenSizeX*1/2;windowSizeY
+alias rightTwoThirds    move    screenOriginX+screenSizeX*1/3;windowTopLeftY screenSizeX*2/3;windowSizeY
+alias middleThird       move    screenOriginX+screenSizeX*1/3;windowTopLeftY screenSizeX*1/3;windowSizeY
+alias fullWidth         move    screenOriginX;windowTopLeftY screenSizeX;windowSizeY
 
-alias leftBig           move screenOriginX;screenOriginY 3*screenSizeX/4;screenSizeY
-alias leftBigThird      move screenOriginX;screenOriginY 2*screenSizeX/3;screenSizeY
-alias leftHalf          move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
-alias leftThird         move screenOriginX;screenOriginY screenSizeX/3;screenSizeY
-alias leftQuarter       move screenOriginX;screenOriginY screenSizeX/4;screenSizeY
-alias leftMiddleQuarter move screenOriginX+screenSizeX/4;screenOriginY screenSizeX/4;screenSizeY
+alias topHalf           move    windowTopLeftX;screenOriginY windowSizeX;screenSizeY*1/2
+alias bottomHalf        move    windowTopLeftX;screenSizeY*1/2+22 windowSizeX;screenSizeY*1/2
+alias fullHeight        move    windowTopLeftX;screenOriginY windowSizeX;screenSizeY
 
-alias rightBig           move screenOriginX+screenSizeX/4;screenOriginY 3*screenSizeX/4;screenSizeY
-alias rightBigThird      move screenOriginX+screenSizeX/3;screenOriginY 2*screenSizeX/3;screenSizeY
-alias rightHalf          move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
-alias rightThird         move screenOriginX+screenSizeX*2/3;screenOriginY screenSizeX/3;screenSizeY
-alias rightQuarter       move screenOriginX+screenSizeX*3/4;screenOriginY screenSizeX/4;screenSizeY
-alias rightMiddleQuarter move screenOriginX+screenSizeX*2/4;screenOriginY screenSizeX/4;screenSizeY
-
-alias top         push   top bar-resize:screenSizeY/2
-alias topLeft     corner top-left resize:screenSizeX/2;screenSizeY/2
-alias topRight    corner top-right resize:screenSizeX/2;screenSizeY/2
-alias bottom      push   bottom bar-resize:screenSizeY/2
-alias bottomLeft  corner bottom-left resize:screenSizeX/2;screenSizeY/2
-alias bottomRight corner bottom-right resize:screenSizeX/2;screenSizeY/2
-
-# Push
-bind h:${hyper} chain ${leftHalf} | ${leftBigThird} | ${leftThird}
-bind l:${hyper} chain ${rightHalf} | ${rightBigThird} | ${rightThird}
-bind k:${hyper} chain ${full} | ${topLeft} | ${topRight} | ${top}
-bind j:${hyper} chain ${bottomLeft} | ${bottomRight} | ${bottom}
+bind h:${hyper} chain ${leftHalf} | ${leftThird} | ${leftTwoThirds} | ${middleThird} | ${fullWidth}
+bind l:${hyper} chain ${rightHalf} | ${rightThird} | ${rightTwoThirds} | ${middleThird} | ${fullWidth}
+bind k:${hyper} chain ${topHalf} | ${fullHeight}
+bind j:${hyper} chain ${bottomHalf} | ${fullHeight}
 
 bind space:${hyper} hint 1234567890

@@ -2,4 +2,3 @@
 stty -ixon
 
 stty werase undef
-bind '\C-w:unix-filename-rubout'

@@ -1,0 +1,1 @@
+bind '\C-w:unix-filename-rubout'

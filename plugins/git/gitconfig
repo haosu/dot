@@ -108,8 +108,7 @@
 	editor = vim
 [user]
 	name = Hao Su
-	email = me@haosu.org
-	gerrit = hao
+	email = hao.su@coinbase.com
 [credential]
   helper = osxkeychain
 [github]
@@ -132,3 +131,8 @@
   enabled = 1
 [include]
   path = ~/.gitconfig.local
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
