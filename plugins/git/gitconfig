@@ -110,7 +110,7 @@
 	name = Hao Su
 	email = hao.su@coinbase.com
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
 [github]
   user = haosu
 [grep]

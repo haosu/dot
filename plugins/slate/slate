@@ -1,4 +1,4 @@
-config defaultToCurrentScreen true
+config defaultToCurrentScreen false
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
 config secondsBeforeRepeat 0.4
