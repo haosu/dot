@@ -1,1 +1,4 @@
+Host *
+    UseKeychain yes
+
 ServerAliveInterval 60

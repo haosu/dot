@@ -26,6 +26,7 @@
   p        = push
   pg       = push gerrit
   pou      = push origin -u
+  plum     = pull upstream master
   rb       = rebase
   rbc      = rebase --continue
   rbi      = rebase --interactive
